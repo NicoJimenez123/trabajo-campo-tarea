@@ -5,7 +5,8 @@ app.get('/api', (req, res) => {
     console.log('Pasó por API')
     res.json({
         "Mensaje": "Hola Mundo",
-        "Estado": "Ok"
+        "Estado": "Ok",
+        "Dia": "jueves"
     }).status(200)
 })
 
