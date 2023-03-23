@@ -1,13 +1,12 @@
 const express = require('express')
+
 const app = express()
+
+const datos = require('../data/data.json') 
 
 app.get('/api', (req, res) => {
     console.log('Pasó por API')
-    res.json({
-        "Mensaje": "Hola Mundo",
-        "Estado": "Ok",
-        "Dia": "jueves"
-    }).status(200)
+    res.json(datos.personas).status(200)
 })
 
 app.listen(3000, () => {
